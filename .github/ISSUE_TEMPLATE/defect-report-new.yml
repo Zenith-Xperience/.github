@@ -1,0 +1,83 @@
+name: Defect Report
+description: Log a defect using the QA defect format
+labels: ["bug"]
+body:
+  - type: input
+    id: defect-id
+    attributes:
+      label: Defect ID
+      description: Optional internal reference (e.g. BUG-008)
+      placeholder: 'BUG-###'
+    validations:
+      required: false
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: Current defect status
+      options:
+        - New
+        - Working on
+        - Verified
+        - Done
+    validations:
+      required: true
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: Any setup required before reproducing the issue
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Clear step-by-step instructions
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: What should happen
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: What actually happens
+    validations:
+      required: true
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions
+      description: 'Optional suggestions, observations, or possible fixes'
+      placeholder: 'Any ideas, edge cases, or related notes'
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment Details
+      description: 'OS, browser, app version, etc.'
+      placeholder: Mac OS / Browser / App version
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        ### Labels (Required)
+        After creating the issue, please add:
+        - **Severity**: `severity:low`, `severity:medium`, `severity:high`
+        - **Priority**: `priority:P1` – `priority:P5`
+        - Any other relevant labels (`ui`, `backend`, `feature`, etc.)
+
+        ### Attachments
+        Add screenshots, videos, or logs using GitHub’s attachment area below.
