@@ -1,4 +1,4 @@
-name: Defect Report
+name: Defect Report Old
 description: Log a defect using the QA defect format
 labels:
   - bug
