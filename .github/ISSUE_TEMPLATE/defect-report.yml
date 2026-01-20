@@ -10,6 +10,14 @@ body:
       placeholder: 'BUG-###'
     validations:
       required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief summary of the defect
+      placeholder: Provide a clear, concise description of the issue
+    validations:
+      required: true
   - type: dropdown
     id: status
     attributes:
@@ -20,6 +28,30 @@ body:
         - Working on
         - Verified
         - Done
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Impact level of the defect
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Priority level for fixing this defect
+      options:
+        - P1
+        - P2
+        - P3
+        - P4
+        - P5
     validations:
       required: true
   - type: textarea
@@ -70,14 +102,3 @@ body:
       placeholder: Mac OS / Browser / App version
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: |
-        ### Labels (Required)
-        After creating the issue, please add:
-        - **Severity**: `severity:low`, `severity:medium`, `severity:high`
-        - **Priority**: `priority:P1` – `priority:P5`
-        - Any other relevant labels (`ui`, `backend`, `feature`, etc.)
-
-        ### Attachments
-        Add screenshots, videos, or logs using GitHub’s attachment area below.
