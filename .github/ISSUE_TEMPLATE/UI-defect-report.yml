@@ -1,35 +1,52 @@
 name: UI Defect Report
-description: Log one or more UI defects using a table-based QA format
+description: Log UI defects with description and a structured table
 labels: ["bug", "ui"]
+
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## UI Defect Report
-
-        Use the table below to record multiple UI issues in a single issue.
-        Update the `Implemented` and `Done` columns as work progresses.
-        In the `Done` column, use `[ ]` for not done and `[x]` for done.
-
   - type: textarea
-    id: ui-defects
+    id: description
     attributes:
-      label: UI Defects Table
-      description: Add all UI issues in the table format below.
-      render: markdown
-      value: |
-        | Description | Implemented | Figma Reference | Done |
-        | --- | --- | --- | --- |
-        | Example: Button padding is incorrect on mobile | No | Figma frame link or screen name | [ ] |
-        | Example: Header text is misaligned | Yes | Figma frame link or screen name | [x] |
+      label: Description
+      description: Provide a clear summary of the UI issues
+      placeholder: Describe the overall UI problem(s)
     validations:
       required: true
 
-  - type: textarea
-    id: notes
+  - type: markdown
     attributes:
-      label: Additional Notes
-      description: Add any extra comments, edge cases, or dependencies here.
-      placeholder: Any extra context for the UI fixes
+      value: |
+        ## UI Table Template (Copy & Paste Below)
+
+        Use this HTML table to document multiple UI issues:
+
+        ```html
+        <table border="1">
+          <tr>
+            <th>Description</th>
+            <th>Implemented</th>
+            <th>Figma Design</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        ```
+
+        Copy this and paste it into the field below, then fill it.
+
+  - type: textarea
+    id: ui-table
+    attributes:
+      label: UI Issues Table
+      description: Paste the HTML table above and fill in the UI defects
+      placeholder: Paste and complete the table here
+      render: html
     validations:
-      required: false
+      required: true
