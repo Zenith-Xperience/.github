@@ -1,0 +1,35 @@
+name: UI Defect Report
+description: Log one or more UI defects using a table-based QA format
+labels: ["bug", "ui"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## UI Defect Report
+
+        Use the table below to record multiple UI issues in a single issue.
+        Update the `Implemented` and `Done` columns as work progresses.
+        In the `Done` column, use `[ ]` for not done and `[x]` for done.
+
+  - type: textarea
+    id: ui-defects
+    attributes:
+      label: UI Defects Table
+      description: Add all UI issues in the table format below.
+      render: markdown
+      value: |
+        | Description | Implemented | Figma Reference | Done |
+        | --- | --- | --- | --- |
+        | Example: Button padding is incorrect on mobile | No | Figma frame link or screen name | [ ] |
+        | Example: Header text is misaligned | Yes | Figma frame link or screen name | [x] |
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Add any extra comments, edge cases, or dependencies here.
+      placeholder: Any extra context for the UI fixes
+    validations:
+      required: false
