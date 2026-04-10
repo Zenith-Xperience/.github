@@ -47,6 +47,5 @@ body:
       label: UI Issues Table
       description: Paste the HTML table above and fill in the UI defects
       placeholder: Paste and complete the table here
-      render: html
     validations:
       required: true
