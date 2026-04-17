@@ -18,42 +18,6 @@ body:
       placeholder: Provide a clear, concise description of the issue
     validations:
       required: true
-  - type: dropdown
-    id: status
-    attributes:
-      label: Status
-      description: Current defect status
-      options:
-        - New
-        - Working on
-        - Verified
-        - Done
-    validations:
-      required: true
-  - type: dropdown
-    id: severity
-    attributes:
-      label: Severity
-      description: Impact level of the defect
-      options:
-        - Low
-        - Medium
-        - High
-    validations:
-      required: true
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      description: Priority level for fixing this defect
-      options:
-        - P1
-        - P2
-        - P3
-        - P4
-        - P5
-    validations:
-      required: true
   - type: textarea
     id: preconditions
     attributes:
@@ -71,21 +35,21 @@ body:
         2.
         3.
     validations:
-      required: true
+      required: false
   - type: textarea
     id: expected
     attributes:
       label: Expected Result
       description: What should happen
     validations:
-      required: true
+      required: false
   - type: textarea
     id: actual
     attributes:
       label: Actual Result
       description: What actually happens
     validations:
-      required: true
+      required: false
   - type: textarea
     id: suggestions
     attributes:
