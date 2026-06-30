@@ -10,7 +10,7 @@ body:
       description: Link the PR that was merged to main for this ticket
       placeholder: "#456"
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: environment
@@ -21,7 +21,7 @@ body:
         - Dev
         - Production
     validations:
-      required: true
+      required: false
 
   - type: input
     id: date-tested
@@ -29,7 +29,7 @@ body:
       label: Date Tested
       placeholder: "e.g. 2026-06-30"
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: checklist
@@ -53,7 +53,7 @@ body:
         Item 2: [screenshot/video link]
         Item 3: [screenshot/video link]
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: regressions
@@ -74,7 +74,7 @@ body:
         - Verified - closing issue
         - Failed - reopening for dev
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: comments
