@@ -1,0 +1,85 @@
+name: QA Verification
+description: Used as a sub-issue under a parent ticket to verify a merged PR on the live/staging environment.
+title: "[QA] "
+labels: ["qa-verification"]
+body:
+  - type: input
+    id: merged-pr
+    attributes:
+      label: Merged PR
+      description: Link the PR that was merged to main for this ticket
+      placeholder: "#456"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment Tested
+      options:
+        - Staging
+        - Dev
+        - Production
+    validations:
+      required: true
+
+  - type: input
+    id: date-tested
+    attributes:
+      label: Date Tested
+      placeholder: "e.g. 2026-06-30"
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Verification Checklist
+      description: Mirror the dev's implementation checklist from the PR. Tick each one only after confirming it works on the live environment. Add matching proof in the "QA Proof" section below.
+      placeholder: |
+        - [ ] Item 1 verified
+        - [ ] Item 2 verified
+        - [ ] Item 3 verified
+    validations:
+      required: false
+
+  - type: textarea
+    id: qa-proof
+    attributes:
+      label: QA Proof
+      description: Attach screenshots, screen recordings, or logs for each verified item. Match them to the checklist item number/name above.
+      placeholder: |
+        Item 1: [screenshot/video link]
+        Item 2: [screenshot/video link]
+        Item 3: [screenshot/video link]
+    validations:
+      required: true
+
+  - type: textarea
+    id: regressions
+    attributes:
+      label: Regression Check
+      description: Anything outside the ticket scope that broke as a result of this merge. Write "None found" if clean.
+      placeholder: |
+        - [ ] No regressions found
+        - [ ] Regressions found (list below)
+    validations:
+      required: false
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: QA Result
+      options:
+        - Verified - closing issue
+        - Failed - reopening for dev
+    validations:
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: QA Comments
+      description: Optional notes for the dev or team
+    validations:
+      required: false
