@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+- [PR and QA Verification Process](#pr-and-qa-verification-process)
 - [GitHub & Version Control](#github--version-control)
   - [Repository Structure](#repository-structure)
   - [Branching](#branching)
@@ -32,6 +33,25 @@
 - [Project Management](#project-management)
   - [Sprint Planning](#sprint-planning)
   - [Retrospective](#retrospective)
+
+---
+
+## PR and QA Verification Process
+
+```mermaid
+flowchart TD
+    A[Dev merges PR to main] --> B[Moves ticket to<br/>QA Verification column]
+    B --> C[PM assigns QA<br/>to the ticket]
+    C --> D[QA creates verification<br/>sub-issue on main ticket]
+    D --> E[QA tests on live,<br/>logs results + proof]
+    E --> F{Any defects found?}
+    F -->|No| G[Verification issue closed<br/>Main ticket closed]
+    F -->|Yes| H[QA creates defect<br/>sub-issue off main ticket]
+    H --> I[Dev fixes, QA verifies<br/>each defect via its own<br/>sub-issue, then closes it]
+    I -.repeats per defect.-> H
+    I --> J[QA re-verifies everything<br/>once all defects are closed]
+    J --> K[Main ticket closed,<br/>with the latest verification issue]
+```
 
 ---
 
