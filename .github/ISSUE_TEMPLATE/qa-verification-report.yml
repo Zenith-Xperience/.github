@@ -1,6 +1,6 @@
 name: QA Verification
 description: Used as a sub-issue under a parent ticket to verify a merged PR on the live/staging environment.
-title: "[QA] "
+title: "Test - "
 labels: ["qa-verification"]
 body:
   - type: input
@@ -10,7 +10,7 @@ body:
       description: Link the PR that was merged to main for this ticket
       placeholder: "#456"
     validations:
-      required: false
+      required: true
 
   - type: dropdown
     id: environment
@@ -21,7 +21,7 @@ body:
         - Dev
         - Production
     validations:
-      required: false
+      required: true
 
   - type: input
     id: date-tested
@@ -29,7 +29,7 @@ body:
       label: Date Tested
       placeholder: "e.g. 2026-06-30"
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: checklist
@@ -41,7 +41,7 @@ body:
         - [ ] Item 2 verified
         - [ ] Item 3 verified
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: qa-proof
@@ -53,7 +53,7 @@ body:
         Item 2: [screenshot/video link]
         Item 3: [screenshot/video link]
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: regressions
@@ -74,7 +74,7 @@ body:
         - Verified - closing issue
         - Failed - reopening for dev
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: comments
