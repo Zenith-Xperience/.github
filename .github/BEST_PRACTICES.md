@@ -16,6 +16,7 @@
   - [Naming Conventions](#naming-conventions)
   - [Styling](#styling)
   - [Technical Debt](#technical-debt)
+  - [Secrets & Credentials](#secrets--credentials)
 - [Brainstorming & Planning](#brainstorming--planning)
 - [Debugging](#debugging)
 - [Logging](#logging)
@@ -151,6 +152,12 @@ Be explicit and consistent. Naming should be uniform across the entire project.
 - Keep the codebase clean, structured, and ready for future extension.
 - If a shortcut or workaround is used due to time constraints, raise a GitHub Issue immediately and tag it `tech-debt` so it is tracked and not forgotten.
 - Before marking a task as done, do a quick self-review. If something feels hacky or unclear, it probably needs a cleaner solution before it ships.
+
+### Secrets & Credentials
+ 
+- Never share API keys, secrets, tokens, passwords, or credentials directly in chat, email, or any communication channel.
+- Always place them in a file (e.g., `.txt`, a secrets document) and share the file through an appropriate secure method instead.
+- If a secret is accidentally shared in plain text anywhere, treat it as compromised and rotate it immediately.
 
 ---
 
