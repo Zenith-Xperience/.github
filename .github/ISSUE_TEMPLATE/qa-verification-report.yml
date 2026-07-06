@@ -1,6 +1,6 @@
 name: QA Verification
 description: Used as a sub-issue under a parent ticket to verify a merged PR on the live/staging environment.
-title: "Test - "
+title: "[MODULE] QA-Verify (#PARENT) - "
 labels: ["qa-verification"]
 body:
   - type: input
