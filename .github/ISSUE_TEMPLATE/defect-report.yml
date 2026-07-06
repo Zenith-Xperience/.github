@@ -1,5 +1,6 @@
 name: Defect Report
 description: Log a defect using the QA defect format
+title: "[MODULE] Defect (#PARENT) - "
 labels: ["bug"]
 body:
   - type: input
