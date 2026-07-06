@@ -1,5 +1,6 @@
 name: UI Defect Report
 description: Log UI defects with description and a structured table
+title: "[MODULE] UI Defect (#PARENT) - "
 labels: ["bug", "ui"]
 
 body:
