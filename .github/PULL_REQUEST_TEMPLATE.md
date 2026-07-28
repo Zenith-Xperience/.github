@@ -10,9 +10,9 @@
 
 ## Implementation Checklist
 <!-- List every distinct piece of work in this PR. This same list will be used by QA post-merge to verify on the live environment. -->
-- [ ] Item 1 - short description
-- [ ] Item 2 - short description
-- [ ] Item 3 - short description
+- [x] Item 1 - short description
+- [x] Item 2 - short description
+- [x] Item 3 - short description
 
 ## Dev Proof
 <!-- Screenshots, screen recordings, logs, or links showing the implementation working locally/in dev. One per checklist item if possible. -->
@@ -22,6 +22,15 @@
 | Item 1 | [screenshot/video link] |
 | Item 2 | [screenshot/video link] |
 | Item 3 | [screenshot/video link] |
+
+## Environment Variable Changes
+<!-- Confirm whether this PR requires any changes to environment variables in dev/staging/prod. If it does, uncheck the box below, check the "requires" box instead, and fill in the table so DevOps/QA can apply the changes before verification. -->
+- [x] This PR does **not** require any environment variable changes
+- [ ] This PR **requires** environment variable changes (list below)
+
+| Variable Name | Purpose | Environment(s) Affected | New / Updated / Removed |
+|---|---|---|---|
+|  |  |  |  |
 
 ## Notes / Known Issues
 <!-- Anything reviewers or QA should know — edge cases, follow-ups, things intentionally left out, etc. -->
